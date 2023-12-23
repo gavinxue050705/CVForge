@@ -1,8 +1,8 @@
 function Education() {
   return (
-    <form className="container">
+    <div className="container">
       <h2>Education</h2>
-    </form>
+    </div>
   );
 }
 

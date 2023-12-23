@@ -1,7 +1,14 @@
-function Resume() {
+import PersonalSection from "./personal/PersonalSection";
+
+function Resume(personal) {
   return (
-    <div className="container">
-      <h2>Resume</h2>
+    <div className="resume">
+      <PersonalSection
+        name={personal.name}
+        email={personal.email}
+        phone={personal.phone}
+        address={personal.address}
+      />
     </div>
   );
 }

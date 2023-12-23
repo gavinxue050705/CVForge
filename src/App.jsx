@@ -3,17 +3,17 @@ import uniqid from "uniqid";
 import sampleData from "../public/sample-data";
 import "./styles/App.css";
 import Header from "./components/Header";
-import Personal from "./components/Personal";
+import Personal from "./components/personal/Personal";
 import Resume from "./components/Resume";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
+import Education from "./components/education/Education";
+import Experience from "./components/experience/Experience";
 
 function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
 
   function handlePersonalChange(e) {
-    const key = e.target.value;
-    setPersonal({ ...personal, key });
+    const { key } = e.target.dataset;
+    setPersonal({ ...personal, [key]: e.target.value });
   }
 
   return (
@@ -23,16 +23,24 @@ function App() {
         <div className="row-form">
           <Personal
             onChange={handlePersonalChange}
-            name={sampleData.name}
-            email={sampleData.email}
-            phone={sampleData.phone}
-            address={sampleData.address}
+            name={personal.name}
+            email={personal.email}
+            phone={personal.phone}
+            address={personal.address}
           />
           <Education />
-          <Experience />
+          <Experience
+            onChange={handlePersonalChange}
+            company={sampleData.experiences.company}
+            position={sampleData.experiences.position}
+            location={sampleData.experiences.location}
+            description={sampleData.experiences.description}
+            startDate={sampleData.experiences.startDate}
+            endDate={sampleData.experiences.endDate}
+          />
         </div>
         <div className="row-resume">
-          <Resume />
+          <Resume personal={personal} />
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@
 .row-resume {
     flex-basis: 60%;
 }
-
-.input {
-
+.resume {
+    background-color: white;
+    height: 100%;
 }

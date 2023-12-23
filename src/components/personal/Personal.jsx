@@ -1,4 +1,4 @@
-import Input from "./Input";
+import Input from "../Input";
 
 function Personal({ onChange, name, email, phone, address }) {
   return (
@@ -8,7 +8,7 @@ function Personal({ onChange, name, email, phone, address }) {
         type="text"
         id="name"
         label="Name"
-        placeholder={name}
+        placeholder="Enter your name"
         value={name}
         onChange={onChange}
       />

@@ -1,0 +1,21 @@
+
+.container {
+    background-color: lightgray;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.row-form {
+    flex-basis: 40%;
+}
+.row-resume {
+    flex-basis: 60%;
+}
+
+.input {
+
+}

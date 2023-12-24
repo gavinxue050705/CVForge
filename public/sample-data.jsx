@@ -24,14 +24,24 @@ const sampleData = {
     },
   ],
 
-  experience: {
-    company: "Apple",
-    position: "Software Engineer",
-    location: "Cupertino, US",
-    description: "feawfwaf",
-    startDate: "01/2020",
-    endDate: "01/2021",
-  },
+  experience: [
+    {
+      company: "Apple",
+      position: "Software Engineer",
+      location: "Cupertino, US",
+      description: "feawfwaf",
+      startDate: "01/2020",
+      endDate: "01/2021",
+    },
+    {
+      company: "Apple",
+      position: "Software Engineer",
+      location: "Cupertino, US",
+      description: "feawfwaf",
+      startDate: "01/2020",
+      endDate: "01/2021",
+    },
+  ],
 };
 
 export default sampleData;

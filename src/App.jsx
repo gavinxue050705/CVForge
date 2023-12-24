@@ -10,8 +10,8 @@ import Experience from "./components/experience/Experience";
 
 function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
-  const [experience, setExperience] = useState(sampleData.experiences[0]);
-  const [education, setEducation] = useState(sampleData.education[0]);
+  const [experience, setExperience] = useState(sampleData.experience);
+  const [education, setEducation] = useState(sampleData.education);
 
   // personal
   function handleNameChange(e) {
@@ -83,11 +83,11 @@ function App() {
             onLocationChange={handleLocationChange}
             onStartDateChange={handleStartDateChange}
             onEndDateChange={handleEndDateChange}
-            degree={sampleData.education[0].degree}
-            school={sampleData.education[0].school}
-            location={sampleData.education[0].location}
-            startDate={sampleData.education[0].startDate}
-            endDate={sampleData.education[0].endDate}
+            degree={education.degree}
+            school={education.school}
+            location={education.location}
+            startDate={education.startDate}
+            endDate={education.endDate}
           />
           <Experience
             onCompanyChange={handleCompanyChange}
@@ -96,12 +96,12 @@ function App() {
             onDescriptionChange={handleDescriptionChange}
             onStartDateChange={handleStartDate1Change}
             onEndDateChange={handleEndDate1Change}
-            company={sampleData.experiences[0].company}
-            position={sampleData.experiences[0].position}
-            location={sampleData.experiences[0].location}
-            description={sampleData.experiences[0].description}
-            startDate={sampleData.experiences[0].startDate}
-            endDate={sampleData.experiences[0].endDate}
+            company={experience.company}
+            position={experience.position}
+            location={experience.location}
+            description={experience.description}
+            startDate={experience.startDate}
+            endDate={experience.endDate}
           />
         </div>
         <div className="row-resume">

@@ -1,15 +1,6 @@
 import Input from "../Input";
 
-function Personal({
-  onNameChange,
-  onEmailChange,
-  onPhoneChange,
-  onAddressChange,
-  name,
-  email,
-  phone,
-  address,
-}) {
+function Personal({ onChange, name, email, phone, address }) {
   return (
     <form className="container">
       <h2>Personal Information</h2>
@@ -18,28 +9,28 @@ function Personal({
         label="Name"
         placeholder="Enter your name"
         value={name}
-        onChange={onNameChange}
+        onChange={onChange}
       />
       <Input
         id="email"
         label="Email"
         placeholder="Enter you email"
         value={email}
-        onChange={onEmailChange}
+        onChange={onChange}
       />
       <Input
         id="phone"
         label="Phone Number"
         placeholder="Enter your phone number"
         value={phone}
-        onChange={onPhoneChange}
+        onChange={onChange}
       />
       <Input
         id="address"
         label="Address"
         placeholder="Enter your address"
         value={address}
-        onChange={onAddressChange}
+        onChange={onChange}
       />
     </form>
   );

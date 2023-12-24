@@ -14,18 +14,11 @@ function App() {
   const [education, setEducation] = useState(sampleData.education);
 
   // personal
-  function handleNameChange(e) {
-    setPersonal({ ...personal, name: e.target.value });
-  }
-  function handleEmailChange(e) {
-    setPersonal({ ...personal, email: e.target.value });
-  }
-  function handlePhoneChange(e) {
-    setPersonal({ ...personal, phone: e.target.value });
-  }
-  function handleAddressChange(e) {
-    setPersonal({ ...personal, address: e.target.value });
-  }
+  const handlePersonalChange = (e) => {
+    const { id, value } = e.target;
+    setPersonal({ ...personal, [id]: value });
+  };
+
   // education
   function handleDegreeChange(e) {
     setEducation({ ...education, degree: e.target.value });
@@ -68,10 +61,7 @@ function App() {
       <div className="row">
         <div className="row-form">
           <Personal
-            onNameChange={handleNameChange}
-            onEmailChange={handleEmailChange}
-            onPhoneChange={handlePhoneChange}
-            onAddressChange={handleAddressChange}
+            onChange={handlePersonalChange}
             name={personal.name}
             email={personal.email}
             phone={personal.phone}

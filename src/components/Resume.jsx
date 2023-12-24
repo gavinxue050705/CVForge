@@ -3,7 +3,6 @@ import ExperienceSection from "./experience/ExperienceSection";
 import PersonalSection from "./personal/PersonalSection";
 
 function Resume({ personal, experience, education }) {
-  console.log(personal);
   return (
     <div className="resume">
       <PersonalSection

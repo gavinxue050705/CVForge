@@ -14,7 +14,6 @@ function Personal({
     <form className="container">
       <h2>Personal Information</h2>
       <Input
-        type="text"
         id="name"
         label="Name"
         placeholder="Enter your name"
@@ -22,26 +21,23 @@ function Personal({
         onChange={onNameChange}
       />
       <Input
-        type="email"
         id="email"
         label="Email"
-        placeholder={email}
+        placeholder="Enter you email"
         value={email}
         onChange={onEmailChange}
       />
       <Input
-        type="tel"
         id="phone"
         label="Phone Number"
-        placeholder={phone}
+        placeholder="Enter your phone number"
         value={phone}
         onChange={onPhoneChange}
       />
       <Input
-        type="text"
         id="address"
         label="Address"
-        placeholder={address}
+        placeholder="Enter your address"
         value={address}
         onChange={onAddressChange}
       />

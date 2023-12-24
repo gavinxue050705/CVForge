@@ -24,7 +24,7 @@ const sampleData = {
     },
   ],
 
-  experience: [
+  experiences: [
     {
       company: "Apple",
       position: "Software Engineer",

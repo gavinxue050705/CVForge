@@ -1,5 +1,5 @@
-import EducationSection from "./education/EducationSection";
-import ExperienceSection from "./experience/ExperienceSection";
+import EducationDisplay from "./education/EducationDisplay";
+import ExperienceDisplay from "./experience/ExperienceDisplay";
 import PersonalSection from "./personal/PersonalSection";
 
 function Resume({ personal, experience, education }) {
@@ -11,21 +11,8 @@ function Resume({ personal, experience, education }) {
         phone={personal.phone}
         address={personal.address}
       />
-      <EducationSection
-        degree={education.degree}
-        school={education.school}
-        location={education.location}
-        startDate={education.startDate}
-        endDate={education.endDate}
-      />
-      <ExperienceSection
-        company={experience.company}
-        position={experience.position}
-        location={experience.location}
-        description={experience.description}
-        startDate={experience.startDate}
-        endDate={experience.endDate}
-      />
+      <EducationDisplay educations={education} />
+      <ExperienceDisplay experiences={experience} />
     </div>
   );
 }

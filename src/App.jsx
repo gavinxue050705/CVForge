@@ -7,11 +7,14 @@ import Personal from "./components/personal/Personal";
 import Resume from "./components/Resume";
 import Education from "./components/education/Education";
 import Experience from "./components/experience/Experience";
+import EducationDisplay from "./components/education/EducationDisplay";
 
 function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
+  const [education, setEducation] = useState(sampleData.educations);
   const [experience, setExperience] = useState(sampleData.experience);
-  const [education, setEducation] = useState(sampleData.education);
+
+  console.log(education);
 
   // personal
   const handlePersonalChange = (e) => {

@@ -7,13 +7,22 @@ const sampleData = {
     phone: "123 456 7890",
     address: "Toronto, ON",
   },
-  education: {
-    degree: "Bachelor in Computer Science",
-    school: "University of Waterloo",
-    location: "Waterloo, CA",
-    startDate: "09/2023",
-    endDate: "present",
-  },
+  education: [
+    {
+      degree: "Bachelor in Computer Science",
+      school: "University of Waterloo",
+      location: "Waterloo, CA",
+      startDate: "09/2023",
+      endDate: "present",
+    },
+    {
+      degree: "Bachelor in Computer Science",
+      school: "University of Waterloo",
+      location: "Waterloo, CA",
+      startDate: "09/2023",
+      endDate: "present",
+    },
+  ],
 
   experience: {
     company: "Apple",

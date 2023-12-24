@@ -10,6 +10,7 @@ import Experience from "./components/experience/Experience";
 
 function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
+  const [experience, setExperience] = useState(sampleData.experiences[0]);
 
   function handleNameChange(e) {
     setPersonal({ ...personal, name: e.target.value });
@@ -24,13 +25,24 @@ function App() {
     setPersonal({ ...personal, address: e.target.value });
   }
 
-  // console.log(personal);
-
-  // function handlePersonalChange(e) {
-  //   const { key } = e.target.dataset;
-  //   setPersonal({ ...personal, [key]: e.target.value });
-  //   console.log("a");
-  // }
+  function handleCompanyChange(e) {
+    setExperience({ ...experience, company: e.target.value });
+  }
+  function handlePositionChange(e) {
+    setExperience({ ...experience, position: e.target.value });
+  }
+  function handleLocationChange(e) {
+    setExperience({ ...experience, location: e.target.value });
+  }
+  function handleDescriptionChange(e) {
+    setExperience({ ...experience, description: e.target.value });
+  }
+  function handleStartDateChange(e) {
+    setExperience({ ...experience, startDate: e.target.value });
+  }
+  function handleEndDateChange(e) {
+    setExperience({ ...experience, endDate: e.target.value });
+  }
 
   return (
     <div>
@@ -48,18 +60,23 @@ function App() {
             address={personal.address}
           />
           <Education />
-          {/* <Experience
-            onChange={handlePersonalChange}
-            company={sampleData.experiences.company}
-            position={sampleData.experiences.position}
-            location={sampleData.experiences.location}
-            description={sampleData.experiences.description}
-            startDate={sampleData.experiences.startDate}
-            endDate={sampleData.experiences.endDate}
-          /> */}
+          <Experience
+            onCompanyChange={handleCompanyChange}
+            onPositionChange={handlePositionChange}
+            onLocationChange={handleLocationChange}
+            onDescriptionChange={handleDescriptionChange}
+            onStartDateChange={handleStartDateChange}
+            onEndDateChange={handleEndDateChange}
+            company={sampleData.experiences[0].company}
+            position={sampleData.experiences[0].position}
+            location={sampleData.experiences[0].location}
+            description={sampleData.experiences[0].description}
+            startDate={sampleData.experiences[0].startDate}
+            endDate={sampleData.experiences[0].endDate}
+          />
         </div>
         <div className="row-resume">
-          <Resume personal={personal} />
+          <Resume personal={personal} experience={experience} />
         </div>
       </div>
     </div>

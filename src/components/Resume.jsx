@@ -1,7 +1,8 @@
+import EducationSection from "./education/EducationSection";
 import ExperienceSection from "./experience/ExperienceSection";
 import PersonalSection from "./personal/PersonalSection";
 
-function Resume({ personal, experience }) {
+function Resume({ personal, experience, education }) {
   console.log(personal);
   return (
     <div className="resume">
@@ -10,6 +11,13 @@ function Resume({ personal, experience }) {
         email={personal.email}
         phone={personal.phone}
         address={personal.address}
+      />
+      <EducationSection
+        degree={education.degree}
+        school={education.school}
+        location={education.location}
+        startDate={education.startDate}
+        endDate={education.endDate}
       />
       <ExperienceSection
         company={experience.company}

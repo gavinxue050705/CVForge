@@ -12,7 +12,7 @@ import EducationDisplay from "./components/education/EducationDisplay";
 function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
   const [education, setEducation] = useState(sampleData.educations);
-  const [experience, setExperience] = useState(sampleData.experience);
+  const [experience, setExperience] = useState(sampleData.experiences);
 
   console.log(education);
 

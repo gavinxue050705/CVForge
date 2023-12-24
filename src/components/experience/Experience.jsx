@@ -1,12 +1,7 @@
 import Input from "../Input";
 
 function Experience({
-  onCompanyChange,
-  onPositionChange,
-  onLocationChange,
-  onDescriptionChange,
-  onStartDateChange,
-  onEndDateChange,
+  onChange,
   company,
   position,
   startDate,
@@ -22,42 +17,42 @@ function Experience({
         label="Company Name"
         placeholder="Enter Company Name"
         value={company}
-        onChange={onCompanyChange}
+        onChange={onChange}
       />
       <Input
         id="position"
         label="Position Title"
         placeholder="Enter Position Title"
         value={position}
-        onChange={onPositionChange}
+        onChange={onChange}
       />
       <Input
         id="startDate"
         label="Start Date"
         placeholder="Enter Start Date"
         value={startDate}
-        onChange={onStartDateChange}
+        onChange={onChange}
       />
       <Input
         id="endDate"
         label="End Date"
         placeholder="Enter End Date"
         value={endDate}
-        onChange={onEndDateChange}
+        onChange={onChange}
       />
       <Input
         id="location"
         label="Location"
         placeholder="Enter Location"
         value={location}
-        onChange={onLocationChange}
+        onChange={onChange}
       />
       <Input
         id="description"
         label="Description"
         placeholder="Enter Description"
         value={description}
-        onChange={onDescriptionChange}
+        onChange={onChange}
       />
       {/* <button>Submit</button> */}
     </div>

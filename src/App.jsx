@@ -20,40 +20,16 @@ function App() {
   };
 
   // education
-  function handleDegreeChange(e) {
-    setEducation({ ...education, degree: e.target.value });
-  }
-  function handleSchoolChange(e) {
-    setEducation({ ...education, school: e.target.value });
-  }
-  function handleLocationChange(e) {
-    setEducation({ ...education, location: e.target.value });
-  }
-  function handleStartDateChange(e) {
-    setEducation({ ...education, startDate: e.target.value });
-  }
-  function handleEndDateChange(e) {
-    setEducation({ ...education, endDate: e.target.value });
-  }
+  const handleEducationChange = (e) => {
+    const { id, value } = e.target;
+    setEducation({ ...education, [id]: value });
+  };
+
   // experience
-  function handleCompanyChange(e) {
-    setExperience({ ...experience, company: e.target.value });
-  }
-  function handlePositionChange(e) {
-    setExperience({ ...experience, position: e.target.value });
-  }
-  function handleLocation1Change(e) {
-    setExperience({ ...experience, location: e.target.value });
-  }
-  function handleDescriptionChange(e) {
-    setExperience({ ...experience, description: e.target.value });
-  }
-  function handleStartDate1Change(e) {
-    setExperience({ ...experience, startDate: e.target.value });
-  }
-  function handleEndDate1Change(e) {
-    setExperience({ ...experience, endDate: e.target.value });
-  }
+  const handleExperienceChange = (e) => {
+    const { id, value } = e.target;
+    setExperience({ ...experience, [id]: value });
+  };
 
   return (
     <div>
@@ -68,11 +44,7 @@ function App() {
             address={personal.address}
           />
           <Education
-            onDegreeChange={handleDegreeChange}
-            onSchoolChange={handleSchoolChange}
-            onLocationChange={handleLocationChange}
-            onStartDateChange={handleStartDateChange}
-            onEndDateChange={handleEndDateChange}
+            onChange={handleEducationChange}
             degree={education.degree}
             school={education.school}
             location={education.location}
@@ -80,12 +52,7 @@ function App() {
             endDate={education.endDate}
           />
           <Experience
-            onCompanyChange={handleCompanyChange}
-            onPositionChange={handlePositionChange}
-            onLocationChange={handleLocation1Change}
-            onDescriptionChange={handleDescriptionChange}
-            onStartDateChange={handleStartDate1Change}
-            onEndDateChange={handleEndDate1Change}
+            onChange={handleExperienceChange}
             company={experience.company}
             position={experience.position}
             location={experience.location}

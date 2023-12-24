@@ -11,10 +11,26 @@ import Experience from "./components/experience/Experience";
 function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
 
-  function handlePersonalChange(e) {
-    const { key } = e.target.dataset;
-    setPersonal({ ...personal, [key]: e.target.value });
+  function handleNameChange(e) {
+    setPersonal({ ...personal, name: e.target.value });
   }
+  function handleEmailChange(e) {
+    setPersonal({ ...personal, email: e.target.value });
+  }
+  function handlePhoneChange(e) {
+    setPersonal({ ...personal, phone: e.target.value });
+  }
+  function handleAddressChange(e) {
+    setPersonal({ ...personal, address: e.target.value });
+  }
+
+  // console.log(personal);
+
+  // function handlePersonalChange(e) {
+  //   const { key } = e.target.dataset;
+  //   setPersonal({ ...personal, [key]: e.target.value });
+  //   console.log("a");
+  // }
 
   return (
     <div>
@@ -22,14 +38,17 @@ function App() {
       <div className="row">
         <div className="row-form">
           <Personal
-            onChange={handlePersonalChange}
+            onNameChange={handleNameChange}
+            onEmailChange={handleEmailChange}
+            onPhoneChange={handlePhoneChange}
+            onAddressChange={handleAddressChange}
             name={personal.name}
             email={personal.email}
             phone={personal.phone}
             address={personal.address}
           />
           <Education />
-          <Experience
+          {/* <Experience
             onChange={handlePersonalChange}
             company={sampleData.experiences.company}
             position={sampleData.experiences.position}
@@ -37,7 +56,7 @@ function App() {
             description={sampleData.experiences.description}
             startDate={sampleData.experiences.startDate}
             endDate={sampleData.experiences.endDate}
-          />
+          /> */}
         </div>
         <div className="row-resume">
           <Resume personal={personal} />

@@ -1,6 +1,7 @@
 import PersonalSection from "./personal/PersonalSection";
 
-function Resume(personal) {
+function Resume({ personal }) {
+  console.log(personal);
   return (
     <div className="resume">
       <PersonalSection

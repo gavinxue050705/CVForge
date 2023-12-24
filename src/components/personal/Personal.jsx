@@ -1,6 +1,15 @@
 import Input from "../Input";
 
-function Personal({ onChange, name, email, phone, address }) {
+function Personal({
+  onNameChange,
+  onEmailChange,
+  onPhoneChange,
+  onAddressChange,
+  name,
+  email,
+  phone,
+  address,
+}) {
   return (
     <form className="container">
       <h2>Personal Information</h2>
@@ -10,7 +19,7 @@ function Personal({ onChange, name, email, phone, address }) {
         label="Name"
         placeholder="Enter your name"
         value={name}
-        onChange={onChange}
+        onChange={onNameChange}
       />
       <Input
         type="email"
@@ -18,7 +27,7 @@ function Personal({ onChange, name, email, phone, address }) {
         label="Email"
         placeholder={email}
         value={email}
-        onChange={onChange}
+        onChange={onEmailChange}
       />
       <Input
         type="tel"
@@ -26,7 +35,7 @@ function Personal({ onChange, name, email, phone, address }) {
         label="Phone Number"
         placeholder={phone}
         value={phone}
-        onChange={onChange}
+        onChange={onPhoneChange}
       />
       <Input
         type="text"
@@ -34,7 +43,7 @@ function Personal({ onChange, name, email, phone, address }) {
         label="Address"
         placeholder={address}
         value={address}
-        onChange={onChange}
+        onChange={onAddressChange}
       />
     </form>
   );

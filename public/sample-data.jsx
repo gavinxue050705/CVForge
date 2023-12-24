@@ -7,7 +7,7 @@ const sampleData = {
     phone: "123 456 7890",
     address: "Toronto, ON",
   },
-  education: [
+  educations: [
     {
       degree: "Bachelor in Computer Science",
       school: "University of Waterloo",

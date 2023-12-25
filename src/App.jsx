@@ -15,8 +15,6 @@ function App() {
   const [education, setEducation] = useState(sampleData.educations);
   const [experience, setExperience] = useState(sampleData.experiences);
 
-  console.log(education);
-
   // personal
   const handlePersonalChange = (e) => {
     const { id, value } = e.target;
@@ -24,9 +22,19 @@ function App() {
   };
 
   // education
-  const handleEducationChange = (e) => {
-    const { id, value } = e.target;
-    setEducation({ ...education, [id]: value });
+  // const handleEducationChange = (e) => {
+  //   const { id, value } = e.target;
+  //   setEducation({ ...education, [id]: value });
+  // };
+  const handleEducationChange = (index) => (e) => {
+    const nextEducation = education.map((education, i) => {
+      if (i === index) {
+        return { ...education, [e.target.id]: e.target.value };
+      } else {
+        return education;
+      }
+    });
+    setEducation(nextEducation);
   };
 
   // experience

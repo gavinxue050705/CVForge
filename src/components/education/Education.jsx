@@ -1,43 +1,51 @@
 import Input from "../Input";
 
-function Education({ onChange, degree, school, location, startDate, endDate }) {
+function Education({
+  index,
+  onChange,
+  degree,
+  school,
+  location,
+  startDate,
+  endDate,
+}) {
   return (
-    <div className="container">
+    <div className="container" index={index}>
       <h2>Education</h2>
       <Input
         id="degree"
         label="Degree"
         placeholder="Enter degree"
         value={degree}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
       <Input
         id="school"
         label="School"
         placeholder="Enter school name"
         value={school}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
       <Input
         id="location"
         label="Location"
         placeholder="Enter location"
         value={location}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
       <Input
         id="startDate"
         label="Start Date"
         placeholder="Enter start date"
         value={startDate}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
       <Input
         id="endDate"
         label="End Date"
         placeholder="Enter end date"
         value={endDate}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
     </div>
   );

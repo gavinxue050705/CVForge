@@ -8,6 +8,7 @@ import Resume from "./components/Resume";
 import Education from "./components/education/Education";
 import Experience from "./components/experience/Experience";
 import EducationDisplay from "./components/education/EducationDisplay";
+import EducationForm from "./components/education/EducationForm";
 
 function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
@@ -46,14 +47,18 @@ function App() {
             phone={personal.phone}
             address={personal.address}
           />
-          <Education
+          <EducationForm
+            educations={education}
+            onChange={handleEducationChange}
+          />
+          {/* <Education
             onChange={handleEducationChange}
             degree={education.degree}
             school={education.school}
             location={education.location}
             startDate={education.startDate}
             endDate={education.endDate}
-          />
+          /> */}
           <Experience
             onChange={handleExperienceChange}
             company={experience.company}

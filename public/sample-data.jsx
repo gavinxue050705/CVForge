@@ -16,7 +16,7 @@ const sampleData = {
       endDate: "present",
     },
     {
-      degree: "Bachelor in Computer Science",
+      degree: "Bachelor in Math",
       school: "University of Waterloo",
       location: "Waterloo, CA",
       startDate: "09/2023",
@@ -34,7 +34,7 @@ const sampleData = {
       endDate: "01/2021",
     },
     {
-      company: "Apple",
+      company: "Google",
       position: "Software Engineer",
       location: "Cupertino, US",
       description: "feawfwaf",

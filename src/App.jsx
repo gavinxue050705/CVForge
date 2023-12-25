@@ -9,6 +9,7 @@ import Education from "./components/education/Education";
 import Experience from "./components/experience/Experience";
 import EducationDisplay from "./components/education/EducationDisplay";
 import EducationForm from "./components/education/EducationForm";
+import ExperienceForm from "./components/experience/ExperienceForm";
 
 function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
@@ -22,10 +23,6 @@ function App() {
   };
 
   // education
-  // const handleEducationChange = (e) => {
-  //   const { id, value } = e.target;
-  //   setEducation({ ...education, [id]: value });
-  // };
   const handleEducationChange = (index) => (e) => {
     const nextEducation = education.map((education, i) => {
       if (i === index) {
@@ -38,9 +35,15 @@ function App() {
   };
 
   // experience
-  const handleExperienceChange = (e) => {
-    const { id, value } = e.target;
-    setExperience({ ...experience, [id]: value });
+  const handleExperienceChange = (index) => (e) => {
+    const nextExperience = experience.map((experience, i) => {
+      if (i === index) {
+        return { ...experience, [e.target.id]: e.target.value };
+      } else {
+        return experience;
+      }
+    });
+    setExperience(nextExperience);
   };
 
   return (
@@ -59,22 +62,9 @@ function App() {
             educations={education}
             onChange={handleEducationChange}
           />
-          {/* <Education
-            onChange={handleEducationChange}
-            degree={education.degree}
-            school={education.school}
-            location={education.location}
-            startDate={education.startDate}
-            endDate={education.endDate}
-          /> */}
-          <Experience
+          <ExperienceForm
+            experiences={experience}
             onChange={handleExperienceChange}
-            company={experience.company}
-            position={experience.position}
-            location={experience.location}
-            description={experience.description}
-            startDate={experience.startDate}
-            endDate={experience.endDate}
           />
         </div>
         <div className="row-resume">

@@ -1,6 +1,7 @@
 import Input from "../Input";
 
 function Experience({
+  index,
   onChange,
   company,
   position,
@@ -10,49 +11,49 @@ function Experience({
   description,
 }) {
   return (
-    <div className="container">
+    <div className="container" index={index}>
       <h2>Experience</h2>
       <Input
         id="company"
         label="Company Name"
         placeholder="Enter Company Name"
         value={company}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
       <Input
         id="position"
         label="Position Title"
         placeholder="Enter Position Title"
         value={position}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
       <Input
         id="startDate"
         label="Start Date"
         placeholder="Enter Start Date"
         value={startDate}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
       <Input
         id="endDate"
         label="End Date"
         placeholder="Enter End Date"
         value={endDate}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
       <Input
         id="location"
         label="Location"
         placeholder="Enter Location"
         value={location}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
       <Input
         id="description"
         label="Description"
         placeholder="Enter Description"
         value={description}
-        onChange={onChange}
+        onChange={onChange(index)}
       />
       {/* <button>Submit</button> */}
     </div>

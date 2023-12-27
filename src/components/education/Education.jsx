@@ -1,3 +1,4 @@
+import ButtonRemove from "../ButtonRemove";
 import Input from "../Input";
 
 function Education({
@@ -8,10 +9,19 @@ function Education({
   location,
   startDate,
   endDate,
+  onRemove,
 }) {
   return (
-    <div index={index}>
-      <h2>Education {index + 1}</h2>
+    <div className="subsection" index={index}>
+      <div className="row-remove">
+        <div className="row-remove-heading">
+          <h2>Education {index + 1}</h2>
+        </div>
+        <div className="row-remove-button">
+          <ButtonRemove onRemove={onRemove} index={index} />
+        </div>
+      </div>
+
       <Input
         id="degree"
         label="Degree"

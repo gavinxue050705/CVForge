@@ -6,7 +6,7 @@ function Personal({ onChange, name, email, phone, address, onDrop }) {
       <h2 onClick={onDrop} className="section-header">
         Personal Information
       </h2>
-      <form id="form-personal">
+      <form id="form-personal" className="subsection">
         <Input
           id="name"
           label="Name"

@@ -1,10 +1,11 @@
-
 .container {
     background-color: white;
     margin: 20px;
     padding: 10px 30px;
     border-radius: 10px;
   }
+
+/* flex */
 .row {
     display: flex;
     flex-direction: row;
@@ -27,6 +28,19 @@
 .row-date-end {
     flex-basis: 45%;
 }
+.row-remove {
+    display: flex;
+    flex-direction: row;
+}
+.row-remove-heading {
+    margin-right: auto;
+}
+.row-remove-button {
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+/*  */
 .resume {
     background-color: white;
     margin: auto;
@@ -44,6 +58,9 @@
 }
 .section-header {
     margin: 10px 0;
+}
+.subsection {
+    margin-bottom: 30px;
 }
 .label {
     margin-bottom: 20px;

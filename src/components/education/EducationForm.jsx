@@ -1,5 +1,4 @@
 import ButtonAdd from "../ButtonAdd";
-import ButtonRemove from "../ButtonRemove";
 import Education from "./Education";
 
 function EducationForm({ educations, onChange, onAdd, onRemove, onDrop }) {
@@ -10,18 +9,16 @@ function EducationForm({ educations, onChange, onAdd, onRemove, onDrop }) {
       </h2>
       <div id="form-education">
         {educations.map((education, i) => (
-          <>
-            <Education
-              index={i}
-              onChange={onChange}
-              degree={education.degree}
-              school={education.school}
-              location={education.location}
-              startDate={education.startDate}
-              endDate={education.endDate}
-            />
-            <ButtonRemove onRemove={onRemove} index={i} />
-          </>
+          <Education
+            index={i}
+            onChange={onChange}
+            degree={education.degree}
+            school={education.school}
+            location={education.location}
+            startDate={education.startDate}
+            endDate={education.endDate}
+            onRemove={onRemove}
+          />
         ))}
         <ButtonAdd onAdd={onAdd} section="Education" />
       </div>

@@ -1,5 +1,4 @@
 import ButtonAdd from "../ButtonAdd";
-import ButtonRemove from "../ButtonRemove";
 import Experience from "./Experience";
 
 function ExperienceForm({ experiences, onChange, onAdd, onRemove, onDrop }) {
@@ -10,19 +9,17 @@ function ExperienceForm({ experiences, onChange, onAdd, onRemove, onDrop }) {
       </h2>
       <div id="form-experience">
         {experiences.map((experience, i) => (
-          <>
-            <Experience
-              index={i}
-              onChange={onChange}
-              company={experience.company}
-              position={experience.position}
-              location={experience.location}
-              description={experience.description}
-              startDate={experience.startDate}
-              endDate={experience.endDate}
-            />
-            <ButtonRemove onRemove={onRemove} index={i} />
-          </>
+          <Experience
+            index={i}
+            onChange={onChange}
+            company={experience.company}
+            position={experience.position}
+            location={experience.location}
+            description={experience.description}
+            startDate={experience.startDate}
+            endDate={experience.endDate}
+            onRemove={onRemove}
+          />
         ))}
         <ButtonAdd onAdd={onAdd} section="Experience" />
       </div>

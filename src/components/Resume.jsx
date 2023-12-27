@@ -1,3 +1,4 @@
+import "../styles/Resume.css";
 import EducationDisplay from "./education/EducationDisplay";
 import ExperienceDisplay from "./experience/ExperienceDisplay";
 import PersonalSection from "./personal/PersonalSection";

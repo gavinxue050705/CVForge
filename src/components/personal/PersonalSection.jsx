@@ -1,11 +1,11 @@
 function PersonalSection({ name, email, phone, address }) {
   return (
-    <div>
-      <h1>{name}</h1>
-      <div>
-        <p>{email}</p>
-        <p>{phone}</p>
-        <p>{address}</p>
+    <div className="section-personal">
+      <h1 className="name">{name}</h1>
+      <div className="row-personal">
+        <p className="row-personal-item">{email}</p>
+        <p className="row-personal-item">{phone}</p>
+        <p className="row-personal-item">{address}</p>
       </div>
     </div>
   );

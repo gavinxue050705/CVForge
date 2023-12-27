@@ -1,0 +1,40 @@
+.resume {
+    font-family: "Computer Modern Serif", sans-serif;
+    padding: 70px;
+}
+
+/* personal section */
+.section-personal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.name {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.row-personal {
+    display: flex;
+    flex-direction: row;
+}
+.row-personal-item {
+    margin: 0 30px;
+}
+
+/* subsections */
+.row-subsection {
+    display: flex;
+    flex-direction: row;
+}
+.row-subsection-left {
+    margin-right: auto;
+}
+.row-subsection-right {
+    margin-left: auto;
+}
+
+/*  */
+p {
+    font-size: 16px;
+}

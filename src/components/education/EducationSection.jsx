@@ -1,11 +1,24 @@
 function EducationSection({ degree, school, location, startDate, endDate }) {
   return (
     <div>
-      <h2>{degree}</h2>
-      <p>{school}</p>
-      <p>{location}</p>
-      <p>{startDate}</p>
-      <p>{endDate}</p>
+      <div className="row-subsection">
+        <div className="row-subsection-left">
+          <h3>{school}</h3>
+        </div>
+        <div className="row-subsection-right">
+          <p>{location}</p>
+        </div>
+      </div>
+      <div className="row-subsection">
+        <div className="row-subsection-left">
+          <p>{degree}</p>
+        </div>
+        <div className="row-subsection-right">
+          <p>
+            {startDate} - {endDate}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

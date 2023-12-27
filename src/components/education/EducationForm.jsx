@@ -5,7 +5,7 @@ function EducationForm({ educations, onChange, onAdd, onRemove, onDrop }) {
   return (
     <div className="container">
       <h2 onClick={onDrop} className="section-header">
-        Education
+        <i class="fa-solid fa-graduation-cap"></i> Education
       </h2>
       <div id="form-education">
         {educations.map((education, i) => (

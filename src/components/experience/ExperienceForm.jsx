@@ -5,7 +5,7 @@ function ExperienceForm({ experiences, onChange, onAdd, onRemove, onDrop }) {
   return (
     <div className="container">
       <h2 onClick={onDrop} className="section-header">
-        Experience
+        <i class="fa-solid fa-briefcase"></i> Experience
       </h2>
       <div id="form-experience">
         {experiences.map((experience, i) => (

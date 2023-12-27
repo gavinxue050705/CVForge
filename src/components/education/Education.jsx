@@ -10,8 +10,8 @@ function Education({
   endDate,
 }) {
   return (
-    <div className="container" index={index}>
-      <h2>{school}</h2>
+    <div index={index}>
+      <h2>Education {index + 1}</h2>
       <Input
         id="degree"
         label="Degree"

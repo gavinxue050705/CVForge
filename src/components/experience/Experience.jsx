@@ -11,8 +11,8 @@ function Experience({
   description,
 }) {
   return (
-    <div className="container" index={index}>
-      <h2>Experience</h2>
+    <div index={index}>
+      <h2>Experience {index + 1}</h2>
       <Input
         id="company"
         label="Company Name"

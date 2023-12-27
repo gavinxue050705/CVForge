@@ -12,6 +12,7 @@ function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
   const [education, setEducation] = useState(sampleData.educations);
   const [experience, setExperience] = useState(sampleData.experiences);
+  const [display, setDisplay] = useState(false);
 
   // personal change
   const handlePersonalChange = (e) => {
@@ -82,6 +83,18 @@ function App() {
     });
   };
 
+  // drop down menu
+  const onDrop = (e) => {
+    const form = document.getElementById("form");
+    setDisplay(!display);
+    console.log(display);
+    if (display === true) {
+      form.style.display = "block";
+    } else {
+      form.style.display = "none";
+    }
+  };
+
   // layout
   return (
     <div>
@@ -94,6 +107,7 @@ function App() {
             email={personal.email}
             phone={personal.phone}
             address={personal.address}
+            onDrop={onDrop}
           />
           <EducationForm
             educations={education}

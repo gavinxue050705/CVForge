@@ -55,6 +55,13 @@ function App() {
     endDate: "",
   };
 
+  // remove
+  const removeEducation = (index) => (e) => {
+    setEducation((education) => {
+      return education.filter((_, i) => index !== i);
+    });
+  };
+
   return (
     <div>
       <Header />
@@ -71,6 +78,7 @@ function App() {
             educations={education}
             onChange={handleEducationChange}
             onAdd={addEducation}
+            onRemove={removeEducation}
           />
           <ExperienceForm
             experiences={experience}

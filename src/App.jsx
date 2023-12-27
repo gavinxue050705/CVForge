@@ -116,7 +116,7 @@ function App() {
 
   // layout
   return (
-    <div>
+    <div className="site">
       <div className="row">
         <div className="row-form">
           <Header />

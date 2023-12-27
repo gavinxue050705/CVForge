@@ -3,7 +3,9 @@ import Input from "../Input";
 function Personal({ onChange, name, email, phone, address, onDrop }) {
   return (
     <div className="container">
-      <h2 onClick={onDrop}>Personal Information</h2>
+      <h2 onClick={onDrop} className="section-header">
+        Personal Information
+      </h2>
       <form id="form-personal">
         <Input
           id="name"

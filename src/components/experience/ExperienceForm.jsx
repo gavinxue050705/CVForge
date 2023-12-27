@@ -5,7 +5,9 @@ import Experience from "./Experience";
 function ExperienceForm({ experiences, onChange, onAdd, onRemove, onDrop }) {
   return (
     <div className="container">
-      <h2 onClick={onDrop}>Experience</h2>
+      <h2 onClick={onDrop} className="section-header">
+        Experience
+      </h2>
       <div id="form-experience">
         {experiences.map((experience, i) => (
           <>

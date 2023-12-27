@@ -5,7 +5,9 @@ import Education from "./Education";
 function EducationForm({ educations, onChange, onAdd, onRemove, onDrop }) {
   return (
     <div className="container">
-      <h2 onClick={onDrop}>Education</h2>
+      <h2 onClick={onDrop} className="section-header">
+        Education
+      </h2>
       <div id="form-education">
         {educations.map((education, i) => (
           <>

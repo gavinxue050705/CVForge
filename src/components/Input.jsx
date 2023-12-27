@@ -1,7 +1,7 @@
 function Input({ id, label, placeholder, value, onChange }) {
   return (
     <div className="input">
-      <h3>{label}</h3>
+      <h3 className="label">{label}</h3>
       <input
         id={id}
         placeholder={placeholder}

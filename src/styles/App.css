@@ -1,8 +1,8 @@
 
 .container {
-    background-color: lightgray;
+    background-color: white;
     margin: 20px;
-    padding: 10px;
+    padding: 10px 30px;
     border-radius: 10px;
   }
 .row {
@@ -27,4 +27,19 @@
 }
 #form-experience {
     display: none;
+}
+.section-header {
+    margin: 10px 0;
+}
+.label {
+    margin-bottom: 20px;
+}
+input {
+    background-color: rgb(244, 242, 242);
+    border-style: none;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 40px;
+    width: 90%;
+    padding: 0 10px;
 }

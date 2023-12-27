@@ -1,5 +1,8 @@
 :root {
   font-family: Helvetica, sans-serif;
   color: black;
-  background-color: gray;
+  background-color: rgb(244, 242, 242);
+}
+html {
+  box-sizing: border-box;
 }

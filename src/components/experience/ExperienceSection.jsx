@@ -8,13 +8,24 @@ function ExperienceSection({
 }) {
   return (
     <div>
-      <h2>{position}</h2>
-      <p>{company}</p>
-      <p>{location}</p>
-      <p>
-        {startDate}
-        {endDate}
-      </p>
+      <div className="row-subsection">
+        <div className="row-subsection-left">
+          <h3>{company}</h3>
+        </div>
+        <div className="row-subsection-right">
+          <p>{location}</p>
+        </div>
+      </div>
+      <div className="row-subsection">
+        <div className="row-subsection-left">
+          <p>{position}</p>
+        </div>
+        <div className="row-subsection-right">
+          <p>
+            {startDate} - {endDate}
+          </p>
+        </div>
+      </div>
       <p>{description}</p>
     </div>
   );

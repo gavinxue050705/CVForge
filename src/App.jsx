@@ -13,13 +13,13 @@ function App() {
   const [education, setEducation] = useState(sampleData.educations);
   const [experience, setExperience] = useState(sampleData.experiences);
 
-  // personal
+  // personal change
   const handlePersonalChange = (e) => {
     const { id, value } = e.target;
     setPersonal({ ...personal, [id]: value });
   };
 
-  // education
+  // education change
   const handleEducationChange = (index) => (e) => {
     const nextEducation = education.map((education, i) => {
       if (i === index) {
@@ -31,7 +31,7 @@ function App() {
     setEducation(nextEducation);
   };
 
-  // experience
+  // experience change
   const handleExperienceChange = (index) => (e) => {
     const nextExperience = experience.map((experience, i) => {
       if (i === index) {
@@ -43,7 +43,7 @@ function App() {
     setExperience(nextExperience);
   };
 
-  // add
+  // add education section
   const addEducation = (e) => {
     setEducation([...education, newEducation]);
   };
@@ -55,13 +55,34 @@ function App() {
     endDate: "",
   };
 
-  // remove
+  // remove education section
   const removeEducation = (index) => (e) => {
     setEducation((education) => {
       return education.filter((_, i) => index !== i);
     });
   };
 
+  // add education section
+  const addExperience = (e) => {
+    setExperience([...experience, newExperience]);
+  };
+  const newExperience = {
+    company: "",
+    position: "",
+    location: "",
+    description: "",
+    startDate: "",
+    endDate: "",
+  };
+
+  // remove Experience section
+  const removeExperience = (index) => (e) => {
+    setExperience((experience) => {
+      return experience.filter((_, i) => index !== i);
+    });
+  };
+
+  // layout
   return (
     <div>
       <Header />
@@ -83,6 +104,8 @@ function App() {
           <ExperienceForm
             experiences={experience}
             onChange={handleExperienceChange}
+            onAdd={addExperience}
+            onRemove={removeExperience}
           />
         </div>
         <div className="row-resume">

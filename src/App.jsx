@@ -12,7 +12,9 @@ function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
   const [education, setEducation] = useState(sampleData.educations);
   const [experience, setExperience] = useState(sampleData.experiences);
-  const [display, setDisplay] = useState(false);
+  const [displayPersonal, setDisplayPersonal] = useState(false);
+  const [displayEducation, setDisplayEducation] = useState(false);
+  const [displayExperience, setDisplayExperience] = useState(false);
 
   // personal change
   const handlePersonalChange = (e) => {
@@ -84,11 +86,28 @@ function App() {
   };
 
   // drop down menu
-  const onDrop = (e) => {
-    const form = document.getElementById("form");
-    setDisplay(!display);
-    console.log(display);
-    if (display === true) {
+  const onDropPersonal = (e) => {
+    const form = document.getElementById("form-personal");
+    setDisplayPersonal(!displayPersonal);
+    if (displayPersonal === true) {
+      form.style.display = "block";
+    } else {
+      form.style.display = "none";
+    }
+  };
+  const onDropEducation = (e) => {
+    const form = document.getElementById("form-education");
+    setDisplayEducation(!displayEducation);
+    if (displayEducation === true) {
+      form.style.display = "block";
+    } else {
+      form.style.display = "none";
+    }
+  };
+  const onDropExperience = (e) => {
+    const form = document.getElementById("form-experience");
+    setDisplayExperience(!displayExperience);
+    if (displayExperience === true) {
       form.style.display = "block";
     } else {
       form.style.display = "none";
@@ -107,19 +126,21 @@ function App() {
             email={personal.email}
             phone={personal.phone}
             address={personal.address}
-            onDrop={onDrop}
+            onDrop={onDropPersonal}
           />
           <EducationForm
             educations={education}
             onChange={handleEducationChange}
             onAdd={addEducation}
             onRemove={removeEducation}
+            onDrop={onDropEducation}
           />
           <ExperienceForm
             experiences={experience}
             onChange={handleExperienceChange}
             onAdd={addExperience}
             onRemove={removeExperience}
+            onDrop={onDropExperience}
           />
         </div>
         <div className="row-resume">

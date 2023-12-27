@@ -3,10 +3,8 @@ import Input from "../Input";
 function Personal({ onChange, name, email, phone, address, onDrop }) {
   return (
     <div className="container">
-      <h2 onClick={onDrop} cla>
-        Personal Information
-      </h2>
-      <form id="form">
+      <h2 onClick={onDrop}>Personal Information</h2>
+      <form id="form-personal">
         <Input
           id="name"
           label="Name"

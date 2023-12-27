@@ -1,7 +1,9 @@
 function ButtonAdd({ onAdd, section }) {
   return (
     <div className="button-add">
-      <button onClick={onAdd}>Add {section}</button>
+      <button onClick={onAdd}>
+        <i class="fa-regular fa-square-plus"></i>
+      </button>
     </div>
   );
 }

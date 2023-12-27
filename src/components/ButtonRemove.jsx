@@ -1,7 +1,9 @@
 function ButtonRemove({ onRemove, index }) {
   return (
-    <div>
-      <button onClick={onRemove(index)}>Remove</button>
+    <div className="button-remove">
+      <button onClick={onRemove(index)}>
+        <i class="fa-solid fa-trash-can"></i>
+      </button>
     </div>
   );
 }

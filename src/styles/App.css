@@ -79,13 +79,10 @@ input {
     padding: 0 10px;
 }
 button {
-    background-color: rgb(244, 242, 242);
+    background-color: white;
     border-style: none;
-    border-radius: 20px;
-    font-size: 14px;
-    height: 40px;
+    font-size: 25px;
     margin: 0 auto;
-    padding: 0 10px;
     cursor: pointer;
 }
 .button-add {

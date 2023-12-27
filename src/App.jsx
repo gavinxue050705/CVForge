@@ -117,9 +117,9 @@ function App() {
   // layout
   return (
     <div>
-      <Header />
       <div className="row">
         <div className="row-form">
+          <Header />
           <Personal
             onChange={handlePersonalChange}
             name={personal.name}

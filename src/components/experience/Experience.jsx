@@ -70,7 +70,6 @@ function Experience({
         value={description}
         onChange={onChange(index)}
       />
-      {/* <button>Submit</button> */}
     </div>
   );
 }

@@ -60,6 +60,8 @@
     margin: 10px 0;
 }
 .subsection {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 30px;
 }
 .label {
@@ -81,6 +83,11 @@ button {
     border-radius: 20px;
     font-size: 14px;
     height: 40px;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 10px;
+}
+.button-add {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
 }

@@ -19,3 +19,12 @@
     background-color: white;
     height: 100%;
 }
+#form-personal {
+    display: none;
+}
+#form-education {
+    display: none;
+}
+#form-experience {
+    display: none;
+}

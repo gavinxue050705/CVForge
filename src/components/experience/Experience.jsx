@@ -27,20 +27,26 @@ function Experience({
         value={position}
         onChange={onChange(index)}
       />
-      <Input
-        id="startDate"
-        label="Start Date"
-        placeholder="Enter Start Date"
-        value={startDate}
-        onChange={onChange(index)}
-      />
-      <Input
-        id="endDate"
-        label="End Date"
-        placeholder="Enter End Date"
-        value={endDate}
-        onChange={onChange(index)}
-      />
+      <div className="row-date">
+        <div className="row-date-start">
+          <Input
+            id="startDate"
+            label="Start Date"
+            placeholder="Enter Start Date"
+            value={startDate}
+            onChange={onChange(index)}
+          />
+        </div>
+        <div className="row-date-end">
+          <Input
+            id="endDate"
+            label="End Date"
+            placeholder="Enter End Date"
+            value={endDate}
+            onChange={onChange(index)}
+          />
+        </div>
+      </div>
       <Input
         id="location"
         label="Location"

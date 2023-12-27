@@ -33,20 +33,26 @@ function Education({
         value={location}
         onChange={onChange(index)}
       />
-      <Input
-        id="startDate"
-        label="Start Date"
-        placeholder="Enter start date"
-        value={startDate}
-        onChange={onChange(index)}
-      />
-      <Input
-        id="endDate"
-        label="End Date"
-        placeholder="Enter end date"
-        value={endDate}
-        onChange={onChange(index)}
-      />
+      <div className="row-date">
+        <div className="row-date-start">
+          <Input
+            id="startDate"
+            label="Start Date"
+            placeholder="Enter start date"
+            value={startDate}
+            onChange={onChange(index)}
+          />
+        </div>
+        <div className="row-date-end">
+          <Input
+            id="endDate"
+            label="End Date"
+            placeholder="Enter end date"
+            value={endDate}
+            onChange={onChange(index)}
+          />
+        </div>
+      </div>
     </div>
   );
 }

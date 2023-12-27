@@ -14,10 +14,24 @@
 }
 .row-resume {
     flex-basis: 60%;
+    background-color: gray;
+}
+.row-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.row-date-start {
+    flex-basis: 45%;
+}
+.row-date-end {
+    flex-basis: 45%;
 }
 .resume {
     background-color: white;
-    height: 100%;
+    margin: auto;
+    width: 850px;
+    height: 1100px;
 }
 #form-personal {
     display: none;
@@ -40,6 +54,16 @@ input {
     border-radius: 5px;
     font-size: 14px;
     height: 40px;
-    width: 90%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+button {
+    background-color: rgb(244, 242, 242);
+    border-style: none;
+    border-radius: 20px;
+    font-size: 14px;
+    height: 40px;
+    margin: auto;
     padding: 0 10px;
 }

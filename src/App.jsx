@@ -12,9 +12,9 @@ function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
   const [education, setEducation] = useState(sampleData.educations);
   const [experience, setExperience] = useState(sampleData.experiences);
-  const [displayPersonal, setDisplayPersonal] = useState(false);
-  const [displayEducation, setDisplayEducation] = useState(false);
-  const [displayExperience, setDisplayExperience] = useState(false);
+  const [displayPersonal, setDisplayPersonal] = useState(true);
+  const [displayEducation, setDisplayEducation] = useState(true);
+  const [displayExperience, setDisplayExperience] = useState(true);
 
   // personal change
   const handlePersonalChange = (e) => {

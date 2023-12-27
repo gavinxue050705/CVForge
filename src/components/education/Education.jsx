@@ -11,7 +11,7 @@ function Education({
 }) {
   return (
     <div className="container" index={index}>
-      <h2>Education</h2>
+      <h2>{school}</h2>
       <Input
         id="degree"
         label="Degree"

@@ -5,9 +5,6 @@ import "./styles/App.css";
 import Header from "./components/Header";
 import Personal from "./components/personal/Personal";
 import Resume from "./components/Resume";
-import Education from "./components/education/Education";
-import Experience from "./components/experience/Experience";
-import EducationDisplay from "./components/education/EducationDisplay";
 import EducationForm from "./components/education/EducationForm";
 import ExperienceForm from "./components/experience/ExperienceForm";
 
@@ -46,6 +43,18 @@ function App() {
     setExperience(nextExperience);
   };
 
+  // add
+  const addEducation = (e) => {
+    setEducation([...education, newEducation]);
+  };
+  const newEducation = {
+    degree: "",
+    school: "",
+    location: "",
+    startDate: "",
+    endDate: "",
+  };
+
   return (
     <div>
       <Header />
@@ -61,6 +70,7 @@ function App() {
           <EducationForm
             educations={education}
             onChange={handleEducationChange}
+            onAdd={addEducation}
           />
           <ExperienceForm
             experiences={experience}

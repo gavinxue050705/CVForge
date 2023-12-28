@@ -1,6 +1,6 @@
 function EducationSection({ degree, school, location, startDate, endDate }) {
   return (
-    <div>
+    <div className="resume-subsection">
       <div className="row-subsection">
         <div className="row-subsection-left">
           <h3>{school}</h3>

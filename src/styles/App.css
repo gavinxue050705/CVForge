@@ -43,8 +43,10 @@
 /*  */
 .resume {
     background-color: white;
-    margin: auto;
-    size: A4;
+    margin: 20px auto;
+    padding: calc(0.5/11*80vh);
+    height: 80vh;
+    width: calc(8.5/11*80vh);
 }
 #form-personal {
     display: none;

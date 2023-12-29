@@ -4,7 +4,7 @@ function Personal({ onChange, name, email, phone, address, onDrop }) {
   return (
     <div className="container">
       <h2 onClick={onDrop} className="section-header">
-        <i class="fa-solid fa-user"></i> Personal Information
+        <i className="fa-solid fa-user"></i> Personal Information
       </h2>
       <form id="form-personal" className="subsection">
         <Input

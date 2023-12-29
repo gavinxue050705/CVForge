@@ -44,8 +44,7 @@
 .resume {
     background-color: white;
     margin: auto;
-    width: 850px;
-    height: 1100px;
+    size: A4;
 }
 #form-personal {
     display: none;

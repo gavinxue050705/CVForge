@@ -1,5 +1,6 @@
 import ButtonRemove from "../ButtonRemove";
 import Input from "../Input";
+import TextArea from "../TextArea";
 
 function Experience({
   index,
@@ -63,7 +64,7 @@ function Experience({
         value={location}
         onChange={onChange(index)}
       />
-      <Input
+      <TextArea
         id="description"
         label="Description"
         placeholder="Enter Description"

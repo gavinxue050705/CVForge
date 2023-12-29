@@ -35,8 +35,8 @@
 /* subsections */
 .resume-subsection {
     font-size: 10px;
-    font-weight: 400;
     padding: 0 10px;
+    margin-bottom: 5px;
 }
 .row-subsection {
     display: flex;
@@ -48,8 +48,7 @@
 .row-subsection-right {
     margin-left: auto;
 }
-
-/*  */
-p {
-    font-size: 16px;
+.row-subsection-left h3,p {
+    font-size: 10px;
+    margin: 2px 0 0 0;
 }

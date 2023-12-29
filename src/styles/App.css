@@ -79,6 +79,18 @@ input {
     box-sizing: border-box;
     padding: 0 10px;
 }
+textarea {
+    background-color: rgb(244, 242, 242);
+    border-style: none;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 120px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    font-family: Helvetica, sans-serif;
+    resize: none;
+}
 button {
     background-color: white;
     border-style: none;

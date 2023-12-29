@@ -7,7 +7,7 @@ function TextArea({ id, label, placeholder, value, onChange }) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-      />
+      ></textarea>
     </div>
   );
 }

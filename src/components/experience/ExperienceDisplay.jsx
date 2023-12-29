@@ -2,8 +2,8 @@ import ExperienceSection from "./ExperienceSection";
 
 function ExperienceDisplay({ experiences }) {
   return (
-    <div>
-      <h2 className="resume-section">EXPERIENCE</h2>
+    <div className="resume-section">
+      <h2>EXPERIENCE</h2>
       <hr />
       {experiences.map((experience) => (
         <ExperienceSection

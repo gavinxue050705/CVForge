@@ -9,21 +9,34 @@
     align-items: center;
     text-align: center;
 }
-.name {
-    margin-top: 0;
-    margin-bottom: 10px;
+.section-personal .name {
+    font-size: 24px;
+    margin: 0;
 }
-.row-personal {
+.section-personal .row-personal {
     display: flex;
     flex-direction: row;
 }
-.row-personal-item {
-    margin: 0 30px;
+.section-personal .row-personal-item {
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+/* sections */
+.resume-section h2 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px 0 0 0;
+}
+.resume-section hr {
+    margin: 0;
 }
 
 /* subsections */
 .resume-subsection {
-    padding: 0 20px;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0 10px;
 }
 .row-subsection {
     display: flex;

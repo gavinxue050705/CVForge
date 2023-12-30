@@ -6,6 +6,22 @@ function ExperienceSection({
   startDate,
   endDate,
 }) {
+  function BulletPoints({ text }) {
+    console.log(text);
+    const newLine = text.indexOf("\n");
+    if (newLine !== -1) {
+      const nextLine = BulletPoints(text.substring(newLine));
+      return (
+        <>
+          <p>{text.substring(0, newLine + 1)}</p>
+          <br />
+          {nextLine}
+        </>
+      );
+    } else {
+      return <p>{text}</p>;
+    }
+  }
   return (
     <div className="resume-subsection">
       <div className="row-subsection">
@@ -26,7 +42,9 @@ function ExperienceSection({
           <p>{location}</p>
         </div>
       </div>
-      <p>{description}</p>
+      <div className="bullet-points">
+        <BulletPoints text={description} />
+      </div>
     </div>
   );
 }

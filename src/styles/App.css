@@ -86,7 +86,7 @@ textarea {
     font-family: Helvetica, sans-serif;
     resize: none;
 }
-button {
+.button-remove button,.button-add button{
     background-color: white;
     border-style: none;
     font-size: 25px;

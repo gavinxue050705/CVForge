@@ -1,4 +1,4 @@
-import BulletPoints from "../BulletPoints";
+import BulletPoints from "./BulletPoints";
 
 function ExperienceSection({
   company,

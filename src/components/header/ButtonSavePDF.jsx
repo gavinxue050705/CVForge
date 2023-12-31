@@ -42,7 +42,11 @@ function ButtonSavePDF() {
       pdf.save("resume.pdf");
     });
   }
-  return <button onClick={getPDF}>Download PDF</button>;
+  return (
+    <button className="button-download" onClick={getPDF}>
+      <i className="fa-solid fa-file"></i> Download PDF
+    </button>
+  );
 }
 
 export default ButtonSavePDF;

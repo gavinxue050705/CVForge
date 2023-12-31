@@ -1,5 +1,14 @@
 .header {
     text-align: center;
     font-size: 20px;
-
+}
+.button-download, .button-github {
+    background-color: grey;
+    font-size: 18px;
+    height: 40px;
+    border-radius: 10px;
+}
+.button-github {
+    display: block;
+    margin: 20px auto;
 }

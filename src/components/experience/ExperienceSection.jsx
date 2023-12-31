@@ -20,7 +20,7 @@ function ExperienceSection({
           </p>
         </div>
       </div>
-      <div className="row-subsection">
+      <div className="row-subsection italic">
         <div className="row-subsection-left">
           <p>{position}</p>
         </div>

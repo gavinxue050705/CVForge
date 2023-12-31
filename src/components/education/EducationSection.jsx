@@ -9,7 +9,7 @@ function EducationSection({ degree, school, location, startDate, endDate }) {
           <p>{location}</p>
         </div>
       </div>
-      <div className="row-subsection">
+      <div className="row-subsection italic">
         <div className="row-subsection-left">
           <p>{degree}</p>
         </div>

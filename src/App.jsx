@@ -2,7 +2,7 @@ import { useState } from "react";
 import uniqid from "uniqid";
 import sampleData from "../public/sample-data";
 import "./styles/App.css";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import Personal from "./components/personal/Personal";
 import Resume from "./components/Resume";
 import EducationForm from "./components/education/EducationForm";

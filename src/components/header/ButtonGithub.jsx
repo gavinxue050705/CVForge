@@ -6,7 +6,7 @@ function ButtonGithub() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i className="fa-brands fa-github"></i> gavin xue
+      <i className="fa-brands fa-github"></i> Gavin Xue
     </a>
   );
 }

@@ -3,6 +3,7 @@
     margin: 20px;
     padding: 10px 30px;
     border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.3);
   }
 
 /* flex */
@@ -15,7 +16,7 @@
 }
 .row-resume {
     flex-basis: 60%;
-    background-color: gray;
+    background-color: none;
 }
 .row-date {
     display: flex;
@@ -41,13 +42,6 @@
 }
 
 /*  */
-.resume {
-    background-color: white;
-    margin: 20px auto;
-    padding: calc(0.5/11*80vh);
-    height: 80vh;
-    width: calc(8.5/11*80vh);
-}
 #form-personal {
     display: none;
 }

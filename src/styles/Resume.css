@@ -1,5 +1,12 @@
 .resume {
+    background-color: white;
+    margin: 50px auto;
+    padding: calc(0.5/11*80vh);
+    height: 80vh;
+    width: calc(8.5/11*80vh);
     font-family: "Computer Modern Serif", sans-serif;
+    position: fixed;
+    left: 50%;
 }
 
 /* personal section */

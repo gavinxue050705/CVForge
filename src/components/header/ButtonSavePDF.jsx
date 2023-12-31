@@ -1,4 +1,5 @@
 function ButtonSavePDF() {
+  // source: https://www.freakyjolly.com/multipage-canvas-pdf-using-jspdf/
   function getPDF() {
     var HTML_Width = $(".resume").width();
     var HTML_Height = $(".resume").height();

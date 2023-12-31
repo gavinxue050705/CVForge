@@ -5,7 +5,7 @@ import PersonalSection from "./personal/PersonalSection";
 
 function Resume({ personal, experience, education }) {
   return (
-    <div id="resume" className="resume canvas_div_pdf">
+    <div className="resume">
       <PersonalSection
         name={personal.name}
         email={personal.email}

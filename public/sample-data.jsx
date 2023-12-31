@@ -29,7 +29,7 @@ const sampleData = {
       company: "Apple",
       position: "Software Engineer",
       location: "Cupertino, US",
-      description: "feawfwaf",
+      description: "feawfwaf\nfeafe",
       startDate: "01/2020",
       endDate: "01/2021",
     },

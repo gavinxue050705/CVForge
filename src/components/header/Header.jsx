@@ -9,7 +9,7 @@ function Header() {
         <h1>
           <span>CV</span>Forge
         </h1>
-        <img src="../../../public/anvil.png" alt="anvil" />
+        <img src="/public/anvil.png" alt="anvil" />
       </div>
       <ButtonSavePDF />
       <ButtonGithub />

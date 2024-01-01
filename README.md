@@ -2,9 +2,9 @@
 
 Create a quick and clean resume template within seconds.
 
-Try it out: (https://cv-forge.netlify.app/)
+Try it out: https://cv-forge.netlify.app/
 
-![website screenshot](screenshot.png)
+![website screenshot](/public/screenshot.png)
 
 ## Features 💡
 

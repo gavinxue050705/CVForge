@@ -1,5 +1,4 @@
 import { useState } from "react";
-import uniqid from "uniqid";
 import sampleData from "../public/sample-data";
 import "./styles/App.css";
 import Header from "./components/header/Header";
@@ -7,14 +6,17 @@ import Personal from "./components/personal/Personal";
 import Resume from "./components/Resume";
 import EducationForm from "./components/education/EducationForm";
 import ExperienceForm from "./components/experience/ExperienceForm";
+import ProjectsForm from "./components/projects/ProjectsForm";
 
 function App() {
   const [personal, setPersonal] = useState(sampleData.personal);
   const [education, setEducation] = useState(sampleData.educations);
   const [experience, setExperience] = useState(sampleData.experiences);
+  const [projects, setProjects] = useState(sampleData.projects);
   const [displayPersonal, setDisplayPersonal] = useState(true);
   const [displayEducation, setDisplayEducation] = useState(true);
   const [displayExperience, setDisplayExperience] = useState(true);
+  const [displayProjects, setDisplayProjects] = useState(true);
 
   // personal change
   const handlePersonalChange = (e) => {
@@ -44,6 +46,18 @@ function App() {
       }
     });
     setExperience(nextExperience);
+  };
+
+  // projects change
+  const handleProjectsChange = (index) => (e) => {
+    const nextProjects = projects.map((project, i) => {
+      if (i === index) {
+        return { ...project, [e.target.id]: e.target.value };
+      } else {
+        return project;
+      }
+    });
+    setProjects(nextProjects);
   };
 
   // add education section
@@ -85,6 +99,23 @@ function App() {
     });
   };
 
+  // add projects section
+  const addProjects = (e) => {
+    setProjects([...projects, newProjects]);
+  };
+  const newProjects = {
+    name: "",
+    technologies: "",
+    description: "",
+  };
+
+  // remove projects section
+  const removeProjects = (index) => (e) => {
+    setProjects((projects) => {
+      return projects.filter((_, i) => index !== i);
+    });
+  };
+
   // drop down menu
   const onDropPersonal = (e) => {
     const form = document.getElementById("form-personal");
@@ -108,6 +139,15 @@ function App() {
     const form = document.getElementById("form-experience");
     setDisplayExperience(!displayExperience);
     if (displayExperience === true) {
+      form.style.display = "block";
+    } else {
+      form.style.display = "none";
+    }
+  };
+  const onDropProjects = (e) => {
+    const form = document.getElementById("form-projects");
+    setDisplayProjects(!displayProjects);
+    if (displayProjects === true) {
       form.style.display = "block";
     } else {
       form.style.display = "none";
@@ -142,12 +182,20 @@ function App() {
             onRemove={removeExperience}
             onDrop={onDropExperience}
           />
+          <ProjectsForm
+            projects={projects}
+            onChange={handleProjectsChange}
+            onAdd={addProjects}
+            onRemove={removeProjects}
+            onDrop={onDropProjects}
+          />
         </div>
         <div className="row-resume">
           <Resume
             personal={personal}
             experience={experience}
             education={education}
+            projects={projects}
           />
         </div>
       </div>

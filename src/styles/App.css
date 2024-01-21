@@ -52,6 +52,9 @@
 #form-experience {
     display: none;
 }
+#form-projects {
+    display: none;
+}
 .section-header {
     margin: 10px 0;
     cursor: pointer;

@@ -63,6 +63,10 @@
     font-size: 10px;
     margin: 2px 0 0 0;
 }
+.row-subsection-left span {
+    font-weight: 400;
+    font-style: italic;
+}
 .italic {
     font-style: italic;
 }

@@ -18,7 +18,7 @@ function ProjectsForm({ projects, onChange, onAdd, onRemove, onDrop }) {
             onRemove={onRemove}
           />
         ))}
-        <ButtonAdd onAdd={onAdd} section="Projects" />
+        <ButtonAdd onAdd={onAdd} />
       </div>
     </div>
   );

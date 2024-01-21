@@ -20,7 +20,7 @@ function EducationForm({ educations, onChange, onAdd, onRemove, onDrop }) {
             onRemove={onRemove}
           />
         ))}
-        <ButtonAdd onAdd={onAdd} section="Education" />
+        <ButtonAdd onAdd={onAdd} />
       </div>
     </div>
   );

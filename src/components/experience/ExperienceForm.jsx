@@ -21,7 +21,7 @@ function ExperienceForm({ experiences, onChange, onAdd, onRemove, onDrop }) {
             onRemove={onRemove}
           />
         ))}
-        <ButtonAdd onAdd={onAdd} section="Experience" />
+        <ButtonAdd onAdd={onAdd} />
       </div>
     </div>
   );

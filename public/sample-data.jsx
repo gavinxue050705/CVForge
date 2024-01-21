@@ -44,6 +44,13 @@ const sampleData = {
       endDate: "June 1995",
     },
   ],
+  projects: [
+    {
+      name: "Jarvis",
+      technologies: "ai",
+      description: "test\nefafe\nfeawfe",
+    },
+  ],
 };
 
 export default sampleData;

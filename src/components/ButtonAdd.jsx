@@ -1,4 +1,4 @@
-function ButtonAdd({ onAdd, section }) {
+function ButtonAdd({ onAdd }) {
   return (
     <div className="button-add">
       <button onClick={onAdd}>

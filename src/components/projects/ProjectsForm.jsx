@@ -5,7 +5,7 @@ function ProjectsForm({ projects, onChange, onAdd, onRemove, onDrop }) {
   return (
     <div className="container">
       <h2 onClick={onDrop} className="section-header">
-        <i className="fa-solid fa-briefcase"></i> Projects
+        <i className="fa-solid fa-pen-ruler"></i> Projects
       </h2>
       <div id="form-projects">
         {projects.map((project, i) => (

@@ -1,6 +1,6 @@
 import ButtonRemove from "../ButtonRemove";
 import Input from "../Input";
-
+//test
 function Education({
   index,
   onChange,
